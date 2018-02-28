@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# NPM package lock file
+package-lock.json
+
+# Truffle compiled contracts
+build/contracts/
