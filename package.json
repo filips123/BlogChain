@@ -24,16 +24,15 @@
     "test": "test"
   },
   "repository": {
-    {
-      "type": "git",
-	  "url": "https://github.com/filips123/BlogChain.git"
-	}
+    "type": "git",
+    "url": "https://github.com/filips123/BlogChain.git"
   },
   "scripts": {
     "test": "truffle test",
-    "dev": "lite-server"
+    "dev": "truffle compile && lite-server"
   },
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "standard": "^11.0.0"
   }
 }

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <meta name="description" content="A decentralized blockchain based blog using Ethereum Smart Contract and Web3." />
+        <meta name="author" content="Filip Š" />
+        
+        <link rel="icon" href="favicon.ico" />
+        
+        <title>BlogChain</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Custom styles for BlogChain -->
+        <link href="css/blogchain.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!-- Navigation Bar (TODO) -->
+		<!--
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="nav blog-nav">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">New features</a>
+                    <a class="nav-link" href="#">Press</a>
+                    <a class="nav-link" href="#">New hires</a>
+                    <a class="nav-link" href="#">About</a>
+                </nav>
+            </div>
+        </div>
+		-->
+        <!-- /.blog-masthead -->
+        
+        <!-- Header -->
+        <div class="blog-header">
+            <div class="container">
+                <h1 class="blog-title" id="blog-name">BlogChain</h1>
+                <p class="lead blog-description" id="blog-description">A decentralized blockchain based blog using Ethereum Smart Contract and Web3.</p>
+            </div>
+        </div>
+        <!-- /.blog-header -->
+        
+        <!-- Body -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 blog-main">
+                    <!-- Loading -->
+                    <div class="blog-post" id="loading">
+                        <div class="progress" style="height:40px;font-size:25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%;height:40px;line-height:40px"><p>loading ...</p></div>
+                        </div>
+                    </div>
+                    
+                    <!-- No Web3 Provider -->
+                    <div class="blog-post" id="no-web3-provider" style="display:none">
+                        <h2 class="blog-post-title">No Web3 provider</h2>
+                        <p>Web3 provider can not be found. Open this page using the <a href="https://github.com/ethereum/mist" target="_blank">Mist browser</a> or use <a href="https://metamask.io" target="_blank">MetaMask addon</a>.</p>
+                        <p>You can also use a custom Web3 provider.</p>
+                        <div class="form-group" id="custom-web3">
+                            <label for="custom-web3-url" id="custom-web3-url-label">Web3 provider URL: *</label>
+                            <input type="url" class="form-control" id="custom-web3-url" required />
+                        </div>
+                        <button type="submit" class="btn btn-default" id="custom-web3-submit">Open with custom Web3 provider</button>
+                    </div>
+                    <!-- /.blog-post -->
+                    
+                    <!-- No Blog Open -->
+                    <div class="blog-post" id="no-blog-open" style="display:none">
+                        <h2 class="blog-post-title">No blog open</h2>
+                        <p>No blog open. Open a blog, or create a new one.</p>
+                    </div>
+					
+                    <!-- No Blog Posts -->
+                    <div class="blog-post" id="no-blog-posts" style="display:none">
+                        <h2 class="blog-post-posts">No blog posts</h2>
+                        <p>No blog posts. If you are blog owner, you can add a post.</p>
+                    </div>
+                    
+                    <!-- Post Added -->
+                    <div class="blog-post" id="post-added" style="display:none">
+                        <h2 class="blog-post-title" id="post-added-title"></h2>
+                        <p id="post-added-description"></p>
+                        <p>transactionHash: <code id="post-added-transactionhash"></code></p>
+                    </div>
+					
+                    <!-- Blog Created -->
+                    <div class="blog-post" id="blog-created" style="display:none">
+                        <h2 class="blog-post-title" id="blog-created-title"></h2>
+                        <p id="blog-created-description"></p>
+                        <p>address: <code id="blog-created-address"></code></p>
+                        <p>transactionHash: <code id="blog-created-transactionhash"></code></p>
+                    </div>
+					
+					<!-- Blog Posts -->
+                    <section id="posts" style="display:none"></section>
+					
+					<!-- Blog Post Template -->
+					<section id="post-template" style="display:none">
+						<div class="blog-post">
+							<h2 class="blog-post-title"></h2>
+							<p class="blog-post-meta"></p>
+							<section class="blog-post-content"></section>
+						</div>
+					</section>
+					
+					<!-- Navigation (TODO) -->
+                    <!--
+					<nav class="blog-pagination">
+                        <a class="btn btn-outline-primary" href="#">Older</a>
+                        <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+                    </nav>
+					-->
+					
+					<!-- Add a Post -->
+                    <div class="blog-post" id="add-post" style="display:none">
+						<hr />
+                        <h2>Add a post</h2>
+                        <div class="form-group">
+                            <label for="add-post-title" id="add-post-title-label">Post title: *</label>
+                            <input type="text" class="form-control" id="add-post-title" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="add-post-content" id="add-post-content-label">Post content: *</label>
+                            <textarea class="form-control" id="add-post-content" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default" id="add-post-submit">Add a post</button>
+                    </div>
+				</div>
+                <!-- /.blog-main -->
+                
+                <!-- Sidebar -->
+                <div class="col-sm-4 offset-sm-2 blog-sidebar">
+					<!-- About BlogChain -->
+                    <div class="sidebar-module sidebar-module-inset">
+                        <h4>About</h4>
+                        <p>BlogChain is a <em>decentralized blockchain based blog</em> using <em>Ethereum Smart Contract</em> and <em>Web3.JS</em>.</p>
+                    </div>
+					
+					<!-- Open Blog -->
+                    <div class="sidebar-module">
+                        <h4>Open Blog</h4>
+                        <div class="form-group" id="open-blog">
+                            <input type="text" class="form-control" id="open-blog-address" placeholder="Blog Address" required disabled />
+                        </div>
+                        <button type="submit" class="btn btn-default" id="open-blog-submit" disabled>Open Blog</button>
+                    </div>
+					
+					<!-- Create Blog -->
+                    <div class="sidebar-module">
+                        <h4>Create Blog</h4>
+                        <div class="form-group" id="create-blog">
+                            <input type="text" class="form-control" id="create-blog-name" placeholder="Blog Name" required disabled />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="create-blog-description" placeholder="Blog Description" disabled />
+                        </div>
+                        <button type="submit" class="btn btn-default" id="create-blog-submit" disabled>Create Blog</button>
+                    </div>
+                    
+					<!-- Archives (TODO) -->
+					<!--
+					<div class="sidebar-module">
+                        <h4>Archives</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">March 2014</a></li>
+                            <li><a href="#">February 2014</a></li>
+                            <li><a href="#">January 2014</a></li>
+                            <li><a href="#">December 2013</a></li>
+                            <li><a href="#">November 2013</a></li>
+                            <li><a href="#">October 2013</a></li>
+                            <li><a href="#">September 2013</a></li>
+                            <li><a href="#">August 2013</a></li>
+                            <li><a href="#">July 2013</a></li>
+                            <li><a href="#">June 2013</a></li>
+                            <li><a href="#">May 2013</a></li>
+                            <li><a href="#">April 2013</a></li>
+                        </ol>
+                    </div>
+					-->
+					
+					<!-- Elsewhere (TODO) -->
+					<!--
+                    <div class="sidebar-module">
+                        <h4>Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+					-->
+                </div>
+                <!-- /.blog-sidebar -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        
+        <!-- Footer -->
+        <footer class="blog-footer">
+            <p>A decentralized blockchain based blog using Ethereum Smart Contract and Web3.</p>
+            <p>
+                <a href="#">Back to top</a>
+            </p>
+        </footer>
+        <!-- /.blog-footer -->
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        
+        <!-- Web3 -->
+        <script src="js/web3.min.js"></script>
+        
+        <!-- BlogChain JavaScrpt App -->
+        <script src="js/blogchain.js"></script>
+    </body>
+</html>
