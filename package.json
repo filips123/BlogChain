@@ -1,0 +1,39 @@
+{
+  "name": "BlogChain",
+  "version": "1.0.0",
+  "description": "A decentralized blockchain based blog using Ethereum Smart Contract and Web3.",
+  "keywords": [
+    "blogchain",
+    "blockchain",
+    "web3",
+    "ethereum",
+    "smart contract",
+    "decentralized"
+  ],
+  "homepage": "https://github.com/filips123/BlogChain",
+  "bugs": {
+    "url": "https://github.com/filips123/BlogChain/issues"
+  },
+  "license": "GPL-3.0+",
+  "author": "Filip Š (https://www.filips.si/)",
+  "main": "",
+  "bin": {},
+  "man": [],
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "repository": {
+    {
+      "type": "git",
+	  "url": "https://github.com/filips123/BlogChain.git"
+	}
+  },
+  "scripts": {
+    "test": "truffle test",
+    "dev": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
