@@ -1,3 +1,5 @@
+![BlogChain Logo](https://vectr.com/filips123/b1Bzz8jXxa.png?width=500&height=100&select=b1Bzz8jXxapage0)
+
 BlogChain
 =========
 A decentralized blockchain based blog using Ethereum Smart Contract and Web3.
@@ -38,7 +40,7 @@ TODO
 TODO
 
 ## Built With
-- [Ethereum Smart Contract](https://www.ethereum.org)
+- [Ethereum](https://www.ethereum.org)
 - [Truffle Framework](http://truffleframework.com)
 - [Web3](https://github.com/ethereum/web3.js)
 - [Bootstrap](https://getbootstrap.com)
@@ -48,7 +50,7 @@ TODO
 TODO
 
 ## Versioning
-TODO
+This project uses [SemVer](http://semver.org) SemVer for versioning. For the versions available, see the [tags on this repository](https://github.com/filips123/BlogChain/tags).
 
 ## License
-TODO
+This project is licensed under the GNU General Public License v3. See the [LICENSE](https://github.com/filips123/BlogChain/blob/master/LICENSE) file for details.
