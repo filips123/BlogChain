@@ -1,6 +1,6 @@
 {
   "name": "BlogChain",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "A decentralized blockchain based blog using Ethereum Smart Contract and Web3.",
   "keywords": [
     "blogchain",
