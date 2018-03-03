@@ -60,5 +60,5 @@ typings/
 # NPM package lock file
 package-lock.json
 
-# Truffle compiled contracts
-build/contracts/
+# Builds
+build
