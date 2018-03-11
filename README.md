@@ -29,7 +29,7 @@ TODO
 You can run BlogChain locally, or publish it to the [IPFS](https://ipfs.io) or another hosting.
 
 ### Requirements
-You must have [Node.js](https://nodejs.org) and [NPM](https://www.npmjs.com). You also need to install [Truffle Framework](http://truffleframework.com).
+You must have [Node.js](https://nodejs.org) and [NPM](https://www.npmjs.com) installed. You also need to install [Truffle Framework](http://truffleframework.com).
 You must be connected to the Ethereum blockchain to use the tests. I suggest you use [Ganache](http://truffleframework.com/ganache), which creates a personal Ethereum blockchain.
 For web hosting, you can use [IPFS](https://ipfs.io).
 
@@ -111,8 +111,10 @@ ipfs name publish your-last-hash
 ```
 The publish name hash will always be the same.
 
-## Configuration
-TODO
+### Configuration
+You can configure Truffle in file [truffle-config.js](https://github.com/filips123/BlogChain/blob/master/truffle-config.js). For more details about configuring Truffle see [Truffle Documentation](http://truffleframework.com/docs/advanced/configuration).
+
+*More options are comming ...*
 
 ## Built With
 - [Ethereum](https://www.ethereum.org)
@@ -122,7 +124,7 @@ TODO
 - [IPFS](https://ipfs.io)
 
 ## Contributing
-TODO
+Please read [CONTRIBUTING.md](https://github.com/filips123/BlogChain/blob/master/CONTRIBUTING.md) for details.
 
 ## Versioning
 This project uses [SemVer](http://semver.org) SemVer for versioning. For the versions available, see the [tags on this repository](https://github.com/filips123/BlogChain/tags).
