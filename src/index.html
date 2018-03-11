@@ -8,20 +8,31 @@
         <meta name="description" content="A decentralized blockchain based blog using Ethereum Smart Contract and Web3." />
         <meta name="author" content="Filip Š" />
         
-        <link rel="icon" href="favicon.ico" />
-        
         <title>BlogChain</title>
         
+        <!-- Icons & Manifests -->
+        <link rel="manifest" href="manifest.json" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#2a2a2a" />
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
+        <meta name="msapplication-TileColor" content="#2a2a2a" />
+        <meta name="msapplication-TileImage" content="icons/mstile-144x144.png" />
+        <meta name="msapplication-config" content="browserconfig.xml" />
+        <meta name="theme-color" content="#999999" />
+        
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
         
         <!-- Custom styles for BlogChain -->
-        <link href="css/blogchain.css" rel="stylesheet">
+        <link href="css/blogchain.css" rel="stylesheet" />
     </head>
     
     <body>
         <!-- Navigation Bar (TODO) -->
-		<!--
+        <!--
         <div class="blog-masthead">
             <div class="container">
                 <nav class="nav blog-nav">
@@ -33,7 +44,7 @@
                 </nav>
             </div>
         </div>
-		-->
+        -->
         <!-- /.blog-masthead -->
         
         <!-- Header -->
@@ -74,7 +85,7 @@
                         <h2 class="blog-post-title">No blog open</h2>
                         <p>No blog open. Open a blog, or create a new one.</p>
                     </div>
-					
+                    
                     <!-- No Blog Posts -->
                     <div class="blog-post" id="no-blog-posts" style="display:none">
                         <h2 class="blog-post-posts">No blog posts</h2>
@@ -87,7 +98,7 @@
                         <p id="post-added-description"></p>
                         <p>transactionHash: <code id="post-added-transactionhash"></code></p>
                     </div>
-					
+                    
                     <!-- Blog Created -->
                     <div class="blog-post" id="blog-created" style="display:none">
                         <h2 class="blog-post-title" id="blog-created-title"></h2>
@@ -95,30 +106,30 @@
                         <p>address: <code id="blog-created-address"></code></p>
                         <p>transactionHash: <code id="blog-created-transactionhash"></code></p>
                     </div>
-					
-					<!-- Blog Posts -->
+                    
+                    <!-- Blog Posts -->
                     <section id="posts" style="display:none"></section>
-					
-					<!-- Blog Post Template -->
-					<section id="post-template" style="display:none">
-						<div class="blog-post">
-							<h2 class="blog-post-title"></h2>
-							<p class="blog-post-meta"></p>
-							<section class="blog-post-content"></section>
-						</div>
-					</section>
-					
-					<!-- Navigation (TODO) -->
+                    
+                    <!-- Blog Post Template -->
+                    <section id="post-template" style="display:none">
+                        <div class="blog-post">
+                            <h2 class="blog-post-title"></h2>
+                            <p class="blog-post-meta"></p>
+                            <section class="blog-post-content"></section>
+                        </div>
+                    </section>
+                    
+                    <!-- Navigation (TODO) -->
                     <!--
-					<nav class="blog-pagination">
+                    <nav class="blog-pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
                         <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
                     </nav>
-					-->
-					
-					<!-- Add a Post -->
+                    -->
+                    
+                    <!-- Add a Post -->
                     <div class="blog-post" id="add-post" style="display:none">
-						<hr />
+                        <hr />
                         <h2>Add a post</h2>
                         <div class="form-group">
                             <label for="add-post-title" id="add-post-title-label">Post title: *</label>
@@ -130,18 +141,18 @@
                         </div>
                         <button type="submit" class="btn btn-default" id="add-post-submit">Add a post</button>
                     </div>
-				</div>
+                </div>
                 <!-- /.blog-main -->
                 
                 <!-- Sidebar -->
                 <div class="col-sm-4 offset-sm-2 blog-sidebar">
-					<!-- About BlogChain -->
+                    <!-- About BlogChain -->
                     <div class="sidebar-module sidebar-module-inset">
                         <h4>About</h4>
                         <p>BlogChain is a <em>decentralized blockchain based blog</em> using <em>Ethereum Smart Contract</em> and <em>Web3.JS</em>.</p>
                     </div>
-					
-					<!-- Open Blog -->
+                    
+                    <!-- Open Blog -->
                     <div class="sidebar-module">
                         <h4>Open Blog</h4>
                         <div class="form-group" id="open-blog">
@@ -149,8 +160,8 @@
                         </div>
                         <button type="submit" class="btn btn-default" id="open-blog-submit" disabled>Open Blog</button>
                     </div>
-					
-					<!-- Create Blog -->
+                    
+                    <!-- Create Blog -->
                     <div class="sidebar-module">
                         <h4>Create Blog</h4>
                         <div class="form-group" id="create-blog">
@@ -162,9 +173,9 @@
                         <button type="submit" class="btn btn-default" id="create-blog-submit" disabled>Create Blog</button>
                     </div>
                     
-					<!-- Archives (TODO) -->
-					<!--
-					<div class="sidebar-module">
+                    <!-- Archives (TODO) -->
+                    <!--
+                    <div class="sidebar-module">
                         <h4>Archives</h4>
                         <ol class="list-unstyled">
                             <li><a href="#">March 2014</a></li>
@@ -181,10 +192,10 @@
                             <li><a href="#">April 2013</a></li>
                         </ol>
                     </div>
-					-->
-					
-					<!-- Elsewhere (TODO) -->
-					<!--
+                    -->
+                    
+                    <!-- Elsewhere (TODO) -->
+                    <!--
                     <div class="sidebar-module">
                         <h4>Elsewhere</h4>
                         <ol class="list-unstyled">
@@ -193,7 +204,7 @@
                             <li><a href="#">Facebook</a></li>
                         </ol>
                     </div>
-					-->
+                    -->
                 </div>
                 <!-- /.blog-sidebar -->
             </div>
