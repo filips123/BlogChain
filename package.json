@@ -32,7 +32,6 @@
     "dev": "truffle compile && lite-server"
   },
   "devDependencies": {
-    "lite-server": "^2.3.0",
-    "standard": "^11.0.0"
+    "lite-server": "^2.3.0"
   }
 }
