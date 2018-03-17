@@ -1,0 +1,22 @@
+language: node_js
+
+sudo: required
+
+node_js:
+  - "node"
+  - "lts/*"
+  - "9.8"
+  - "8.10"
+  - "7.10.1"
+  - "6.13.1"
+
+before_install:
+  - npm install -g npm@latest
+  - npm install -g ganache-cli truffle
+
+install:
+  - npm install 
+
+script:
+  - ganache-cli -p 7545 &
+  - npm test
