@@ -1,0 +1,2 @@
+<!-- For reporting bugs use https://github.com/filips123/BlogChain/issues/new/?labels=bug&template=bugs.md -->
+<!-- For requesting new features, improvements and changes use https://github.com/filips123/BlogChain/issues/new/?labels=enhancement&template=features.md -->
